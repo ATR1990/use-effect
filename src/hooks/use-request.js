@@ -26,7 +26,9 @@ export const useRequest = (request) => {
         error
       }))
 
-    return () => cancelled = true
+    return () => {
+      cancelled = true
+    }
   }, [ request, initialState ])
 
   return dataState
