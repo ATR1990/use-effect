@@ -14,7 +14,7 @@ export const useRequest = (request) => {
 
     let cancelled = false
 
-    request()
+    request?.()
       .then(data => !cancelled && setDataState({
         data,
         loading: false,
